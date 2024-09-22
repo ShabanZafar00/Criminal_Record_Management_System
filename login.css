@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(back_jail.png);
+    margin: 0;
+}
+
+.login_page {
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login_page h1 {
+    margin-bottom: 20px;
+}
+
+.login_page table {
+    width: 100%;
+}
+
+.login_page label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login_page input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.login_page button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #7c2d2d;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.large-button input[type="submit"] {
+    background-color: #602121;
+    color: #ffffff;
+    border: 2px solid #602121;
+    border-radius: 20px; /* Make the button round */
+    height: 50px; /* Set height */
+    width: 150px; /* Set width */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login_page button:hover {
+    background-color: #602121;
+    color: #ffffff;
+}
+
+.rounded-input-submit:hover {
+    background-color: #602121;
+    color: #ffffff;
+    border-radius: 30px;
+}
+
+.large-button input[type="submit"]:hover {
+    background-color: #602121;
+    color: #fff;
+    border-radius: 20px;
+}
+
+#notification {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}

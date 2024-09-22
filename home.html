@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criminal Record Management System - Home</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="home_page">
+        <div class="content rounded-input">
+            <h1>Criminal Record Management System</h1><br>
+            <div class="search-bar">
+                <input type="text" id="casId" name="casId" class="rounded-input" required placeholder="Enter the Case ID">
+                <button type="button" id="searchButton" class="large-button rounded-input-search">Search</button>
+            </div>
+            <div id="searchResults"></div> <!-- This div will display search results or messages -->
+        </div>
+    </div>
+
+    <!-- Contact Us Button -->
+    <button id="contactUsButton" class="contact-button">Contact Us</button>
+
+    <!-- Contact Us Modal -->
+    <div id="contactUsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactUsForm">
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="email" class="rounded-input" required>
+                <label for="contactMessage">Message:</label>
+                <textarea id="contactMessage" name="message" class="rounded-input" required></textarea>
+                <button type="submit" class="large-button rounded-input-search">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#searchButton').click(function () {
+                const casId = $('#casId').val().trim();
+                if (casId === "") {
+                    alert("Please enter a Case ID.");
+                    return;
+                }
+
+                // AJAX request to fetch case details
+                $.ajax({
+                    url: 'search_case.php', // PHP script to handle the search
+                    type: 'POST',
+                    data: { casID: casId },
+                    success: function (response) {
+                        $('#searchResults').html(response); // Display the response inside #searchResults
+                    },
+                    error: function () {
+                        $('#searchResults').html("<p style='color:red;'>An error occurred while searching. Please try again.</p>");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

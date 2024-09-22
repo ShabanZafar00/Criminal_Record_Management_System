@@ -1,0 +1,50 @@
+.first_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: aliceblue;
+    background-image: url('back_jail.png');
+    background-size: cover; /* Adjust to cover entire background */
+    text-align: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    width: 100%;
+    padding: 20px;
+    
+}
+
+.large-button {
+    font-size: 20px;
+    text-align: center;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+   
+}
+
+.large-button input[type="button"] {
+    background-color: #fff;
+    color: #602121;
+   
+    border-radius: 50px; /* Make the button round */
+    height: 50px; /* Set equal height and width */
+    width: 150px; /* Set width */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.large-button input[type="button"]:hover {
+    background-color: #602121;
+    color: #fff;
+}

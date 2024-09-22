@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Criminal Record</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <div class="content signup_page">
+        <h1>Add New Criminal Record</h1>
+        <form action="add_record.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="casID">Case ID:</label></td>
+                    <td><input type="text" id="casID" name="casID" required class="rounded-input" placeholder="enter case id"></td>
+                    <td><label for="criminal_name">Criminal Name:</label></td>
+                    <td><input type="text" id="criminal_name" name="criminal_name" required class="rounded-input" placeholder="enter criminal name"></td>
+                </tr>
+                <tr>
+                    <td><label for="criminal_cnic">Criminal CNIC:</label></td>
+                    <td><input type="text" id="criminal_cnic" name="criminal_cnic" required class="rounded-input" placeholder="enter criminal cnic"></td>
+                    <td><label for="victim_name">Victim Name:</label></td>
+                    <td><input type="text" id="victim_name" name="victim_name" required class="rounded-input" placeholder="enter victim name"></td>
+                </tr>
+                <tr>
+                    <td><label for="victim_cnic">Victim CNIC:</label></td>
+                    <td><input type="text" id="victim_cnic" name="victim_cnic" required class="rounded-input" placeholder="enter victim cnic"></td>
+                    <td><label for="tool">Tool of Crime:</label></td>
+                    <td><input type="text" id="tool" name="tool" required class="rounded-input" placeholder="enter tool use for crime"></td>
+                </tr>
+                <tr>
+                    <td><label for="investigator_id">Investigator ID:</label></td>
+                    <td><input type="text" id="investigator_id" name="investigator_id" required class="rounded-input" placeholder="enter investigator id"></td>
+                    <td><label for="judge_id">Judge ID:</label></td>
+                    <td><input type="text" id="judge_id" name="judge_id" required class="rounded-input" placeholder="enter judge id"></td>
+                </tr>
+                <tr>
+                    <td><label for="judge_name">Judge Name:</label></td>
+                    <td><input type="text" id="judge_name" name="judge_name" required class="rounded-input" placeholder="enter judge name"></td>
+                    <td><label for="court_id">Court ID:</label></td>
+                    <td><input type="text" id="court_id" name="court_id" required class="rounded-input" placeholder="enter court id"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Date:</label></td>
+                    <td><input type="date" id="date" name="date" required class="rounded-input"></td>
+                    <td><label for="status">Status:</label></td>
+                    <td><input type="text" id="status" name="status" required class="rounded-input" placeholder="enter status of case"></td>
+                </tr>
+                <tr>
+                    <td><label for="punishment">Punishment:</label></td>
+                    <td><input type="text" id="punishment" name="punishment" required class="rounded-input" placeholder="enter punishment"></td>
+                    <td><label for="witness">Witness:</label></td>
+                    <td><input type="text" id="witness" name="witness" required class="rounded-input" placeholder="enter number of witnesses"></td>
+                </tr>
+                <tr>
+                    <td><label for="crime_address">Crime Address:</label></td>
+                    <td><input type="text" id="crime_address" name="crime_address" required class="rounded-input" placeholder="enter crime address"></td>
+                    <td><label for="crime">Crime:</label></td>
+                    <td><input type="text" id="crime" name="crime" required class="rounded-input" placeholder="enter crime"></td>
+                </tr>
+            </table>
+            <div class="container">
+                <div class="large-button">
+                    <input type="submit" value="Add Record">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

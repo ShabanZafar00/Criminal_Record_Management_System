@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <div class="signup_page content">
+        <h1>Login</h1>
+        <form id="loginForm" method="POST" action="login.php">
+            <table>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td>
+                        <input type="email" id="email" name="email" required class="rounded-input" placeholder="Enter your email"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td>
+                        <input type="password" id="password" name="password" required class="rounded-input" placeholder="Enter your password"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="container">
+                            <div class="large-button">
+                                <input type="submit" value="Login">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <p><a href="forgotpassword.html">Forgot your password?</a></p>
+        <div id="notification"></div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

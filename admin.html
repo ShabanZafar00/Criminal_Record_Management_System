@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Selection</title>
+    <link rel="stylesheet" href="firstpage.css" />
+  </head>
+  <body>
+    <div class="first_page content">
+      <h1><b>Criminal Record Management System</b></h1>
+      <div class="large-button">
+        <form id="userForm">
+          <label for="checking"></label>
+          <select name="checking" id="checking" class="large-button">
+            <option value="">You are</option>
+            <option value="Officer" style="border-radius: 30px;">Officer</option>
+            <option value="Citizen">Citizen</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("checking")
+        .addEventListener("change", function () {
+          if (this.value === "Officer") {
+            window.location.href = "officerPage.html"; // Change 'officerPage.html' to your target page
+          } else {
+            window.location.href = "signup.html";
+          }
+        });
+    </script>
+  </body>
+</html>

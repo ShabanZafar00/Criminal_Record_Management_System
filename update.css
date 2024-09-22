@@ -1,0 +1,96 @@
+.signup_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes the full height of the viewport */
+    color: aliceblue;
+    background-image: url('back_jail.png');
+    background-size: cover; /* Cover the entire background without stretching */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    width: 100%; /* Ensure full width */
+    overflow: hidden; /* Prevent scrolling if content overflows */
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background for readability */
+    border-radius: 20px; /* Rounded corners for the container */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Parent container styling to centralize the button */
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    min-height: 10vh; /* Ensures the container takes full height for vertical centering */
+}
+
+/* Modified .large-button styling */
+.large-button {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto; /* Center with auto margins */
+    background-color: #ffffff;
+    color: #8b3131;
+    border-radius: 20px;
+    padding: 5px 15px; /* Adjusted padding */
+    max-width: 200px; /* Control the max width */
+    display: inline-block; /* Fit to content */
+    box-sizing: border-box;
+}
+
+.large-button input[type="submit"] {
+    background-color: #fff;
+    color: #602121;
+    border: 2px solid #602121;
+    border-radius: 20px;
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.large-button input[type="submit"]:hover {
+    background-color: #602121;
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+.rounded-input-submit:hover {
+    background-color: #602121;
+    color: #ffffff;
+    border-radius: 20px;
+    
+}
+
+.rounded-input {
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%; /* Make inputs take full width of their container */
+    box-sizing: border-box;
+    margin: 5px 0; /* Add margin for spacing */
+}
+
+table td, table th {
+    padding: 10px;
+}
+
+table th {
+    text-align: left;
+}

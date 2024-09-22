@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Officer Signup Page</title>
+    <link rel="stylesheet" href="update.css" />
+  </head>
+  <body>
+    <div class="signup_page content">
+      <h1>Signup</h1>
+      <form id="signupForm" action="officerPage.php" method="POST">
+        <table>
+          <tr>
+            <td>First Name:</td>
+            <td>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                class="rounded-input"
+                placeholder="Enter your first name"
+              />
+            </td>
+            <td>Last Name:</td>
+            <td>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                class="rounded-input"
+                placeholder="Enter your last name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="rounded-input"
+                placeholder="Enter your email"
+              />
+            </td>
+            <td>Password:</td>
+            <td>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                class="rounded-input"
+                placeholder="Enter your password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Contact No:</td>
+            <td>
+              <input
+                type="text"
+                id="contactNo"
+                name="contactNo"
+                required
+                class="rounded-input"
+                placeholder="Enter your contact number"
+              />
+            </td>
+            <td>Officer ID:</td>
+            <td>
+              <input
+                type="text"
+                id="officerID"
+                name="officerID"
+                class="rounded-input"
+                placeholder="Enter your officer ID"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Rank:</td>
+            <td>
+              <input
+                type="text"
+                id="rank"
+                name="rank"
+                class="rounded-input"
+                placeholder="Enter your rank"
+              />
+            </td>
+            <td>City:</td>
+            <td>
+              <select name="city" id="city" class="rounded-input">
+                <option value="lahore">Lahore</option>
+                <option value="karachi">Karachi</option>
+                <option value="faislabad">Faislabad</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="multan">Multan</option>
+                <option value="peshawar">Peshawar</option>
+                <option value="quetta">Quetta</option>
+                <option value="skardu">Skardu</option>
+                <option value="muzafarabad">Muzafarabad</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <div class="container">
+                <div class="large-button">
+                    <input type="submit" value="Signup">
+                </div>
+            </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

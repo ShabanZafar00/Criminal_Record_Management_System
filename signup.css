@@ -1,0 +1,83 @@
+.signup_page {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    height: 100vh;
+    min-height: 100vh;
+    color: aliceblue;
+    background-image: url('back_jail.png');
+    background-size: cover; /* Adjust to cover entire background */
+    text-align: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background for readability */
+    border-radius: 20px; /* Rounded corners for the container */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.large-button {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #8b3131;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.large-button input[type="submit"] {
+    background-color: #fff;
+    color: #602121;
+    border: 2px solid #602121;
+    border-radius: 20px; /* Make the button round */
+    height: 50px; /* Set height */
+    width: 150px; /* Set width */
+    font-size: 16px; /* Adjust font size */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.large-button input[type="submit"]:hover {
+    background-color: #602121;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.rounded-input-submit:hover {
+    background-color: #602121;
+    color: #ffffff;
+    border-radius: 20px;
+    
+}
+
+.rounded-input {
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%; /* Make inputs take full width of their container */
+    box-sizing: border-box;
+    margin: 5px 0; /* Add margin for spacing */
+}
+
+table td, table th {
+    padding: 10px;
+}
+
+table th {
+    text-align: left;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Criminal Record</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup_page content">
+        <h1>Update Criminal Record</h1>
+        <?php
+        // Database configuration
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "criminal_record_management";
+
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Retrieve form data
+        $casID = isset($_GET['casID']) ? $_GET['casID'] : '';
+
+        // Fetch record
+        $stmt = $conn->prepare("SELECT * FROM crime WHERE casID = ?");
+        $stmt->bind_param("s", $casID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $record = $result->fetch_assoc();
+
+        $stmt->close();
+        $conn->close();
+        ?>
+        <form action="update_record.php" method="POST">
+            <table>
+                <tr>
+                    <td><label for="casID">Case ID:</label></td>
+                    <td><input type="text" id="casID" name="casID" required class="rounded-input" value="<?php echo htmlspecialchars($record['casID']); ?>" readonly></td>
+                    <td><label for="criminal_name">Criminal Name:</label></td>
+                    <td><input type="text" id="criminal_name" name="criminal_name" required class="rounded-input" value="<?php echo htmlspecialchars($record['criminal_name']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="criminal_cnic">Criminal CNIC:</label></td>
+                    <td><input type="text" id="criminal_cnic" name="criminal_cnic" required class="rounded-input" value="<?php echo htmlspecialchars($record['criminal_cnic']); ?>"></td>
+                    <td><label for="victim_name">Victim Name:</label></td>
+                    <td><input type="text" id="victim_name" name="victim_name" required class="rounded-input" value="<?php echo htmlspecialchars($record['victim_name']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="victim_cnic">Victim CNIC:</label></td>
+                    <td><input type="text" id="victim_cnic" name="victim_cnic" required class="rounded-input" value="<?php echo htmlspecialchars($record['victim_cnic']); ?>"></td>
+                    <td><label for="tool">Tool of Crime:</label></td>
+                    <td><input type="text" id="tool" name="tool" required class="rounded-input" value="<?php echo htmlspecialchars($record['tool']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="investigator_id">Investigator ID:</label></td>
+                    <td><input type="text" id="investigator_id" name="investigator_id" required class="rounded-input" value="<?php echo htmlspecialchars($record['investigator_id']); ?>"></td>
+                    <td><label for="judge_id">Judge ID:</label></td>
+                    <td><input type="text" id="judge_id" name="judge_id" required class="rounded-input" value="<?php echo htmlspecialchars($record['judge_id']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="judge_name">Judge Name:</label></td>
+                    <td><input type="text" id="judge_name" name="judge_name" required class="rounded-input" value="<?php echo htmlspecialchars($record['judge_name']); ?>"></td>
+                    <td><label for="court_id">Court ID:</label></td>
+                    <td><input type="text" id="court_id" name="court_id" required class="rounded-input" value="<?php echo htmlspecialchars($record['court_id']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Date:</label></td>
+                    <td><input type="date" id="date" name="date" required class="rounded-input" value="<?php echo htmlspecialchars($record['date']); ?>"></td>
+                    <td><label for="status">Status:</label></td>
+                    <td><input type="text" id="status" name="status" required class="rounded-input" value="<?php echo htmlspecialchars($record['status']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="punishment">Punishment:</label></td>
+                    <td><input type="text" id="punishment" name="punishment" required class="rounded-input" value="<?php echo htmlspecialchars($record['punishment']); ?>"></td>
+                    <td><label for="witness">Witness:</label></td>
+                    <td><input type="text" id="witness" name="witness" required class="rounded-input" value="<?php echo htmlspecialchars($record['witness']); ?>"></td>
+                </tr>
+                <tr>
+                    <td><label for="crime_address">Crime Address:</label></td>
+                    <td><input type="text" id="crime_address" name="crime_address" required class="rounded-input" value="<?php echo htmlspecialchars($record['crime_address']); ?>"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="Update Record" class="rounded-input-submit large-button">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

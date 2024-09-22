@@ -1,0 +1,109 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.home_page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Judges-Appointment-image.jpg);
+    color: rgb(255, 255, 255);
+}
+
+.content {
+    text-align: center;
+}
+
+.rounded-input {
+    padding: 10px;
+    border-radius: 30px;
+    border: 4px solid #602121;
+    margin-bottom: 10px;
+}
+
+.rounded-input-search {
+    background-color: #602121;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 20px;
+}
+
+.large-button {
+    font-size: 16px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    margin-right: 10px;
+}
+
+/* Contact button styles */
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #602121;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 120px;
+    height: 100px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #602121;
+    text-decoration: none;
+    cursor: pointer;
+}
+
